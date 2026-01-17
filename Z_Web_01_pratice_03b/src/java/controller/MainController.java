@@ -46,6 +46,7 @@ public class MainController extends HttpServlet {
             String url = "";
             UserDAO udao = new UserDAO();
             UserDTO user = udao.login(txtUsername, txtPassword);
+            System.out.println(user);
             if(user!=null){
                 url ="a.jsp";
                 request.setAttribute("user", user);

@@ -5,7 +5,6 @@
 --%>
 
 <%@page import="model.UserDTO"%>
-<%@page import="model.UserDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,7 +16,7 @@
         <%
             UserDTO u = (UserDTO)request.getAttribute("user");
         %>
-        <h1>Welcome, <%=u.getFullname()%> </h1>
+        <h1>Welcome, <%=u.getFullName()%> </h1>
         <h2>Bang dieu khien</h2>
         Tinh nang 1 <br/>
         Tinh nang 2 <br/>

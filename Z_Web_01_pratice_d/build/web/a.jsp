@@ -4,6 +4,8 @@
     Author     : PC
 --%>
 
+<%@page import="model.UserDTO"%>
+<%@page import="model.UserDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,7 +14,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Bang dieu khien</h1>
+        <%
+            UserDTO u = (UserDTO)request.getAttribute("user");
+        %>
+        <h1>Welcome, <%=u.getFullname()%> </h1>
+        <h2>Bang dieu khien</h2>
         Tinh nang 1 <br/>
         Tinh nang 2 <br/>
         Tinh nang 3 <br/>

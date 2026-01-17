@@ -13,10 +13,15 @@
     </head>
     <body>
         <form action="MainController" method="post">
-            Username: <input type="text" name="txtUsername"/> <br/>
-            Password: <input type="password" name="txtPassword"/> <br/>
-            <input type="submit" value="Login"/>
+            Username: <input type="text" name="txtUsername" /> <br/>
+            Password: <input type="password" name="txtPassword" /> <br/>
+            <input type="submit" value="Login" />
         </form>
+        <%
+            String message = request.getAttribute("message")+"";
+            message = (message.equals("null"))?"":message;
+        %>
+        <span style="color:red"> <%=message%></span>
     </body>
 </html>
 <!-- get chỗ này là sai 
